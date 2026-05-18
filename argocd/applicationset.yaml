@@ -9,24 +9,21 @@ spec:
         elements:
           - env: dev
           - env: prod
-      template:
-        metadata:
-          name: "gitops-app-{{env}}"
-          namespace: argocd
-        spec:
-          project: gitops-project
-          source:
-            repoURL: https://github.com/junji77/gitops-config
-            targetRevision: main
-            path: apps/gitops-app/overlays/{{env}}
-          destination:
-            server: https://kubernetes.default.svc
-            namespace: gitops-app-{{env}}
-
-          syncPolicy:
-            automated:
-              prune: true
-              selfHeal: true
-
-            syncOptions:
-              - CreateNamespace=true
+  template:
+    metadata:
+      name: "gitops-app-{{env}}"
+    spec:
+      project: gitops-project
+      source:
+        repoURL: https://github.com/junji77/gitops-config
+        targetRevision: main
+        path: apps/gitops-app/overlays/{{env}}
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: gitops-app-{{env}}
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
