@@ -19,8 +19,8 @@ labels:
 
 images:
 - name: gitops-app
-  newName: dockerlecture/gitops-app
-  newTag: sha-34d4533
+  newName: junjihun/gitops-app
+  newTag: sha-478e3f5
 
 replicas:
 - count: 1
