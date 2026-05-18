@@ -20,7 +20,7 @@ labels:
 images:
 - name: gitops-app
   newName: junjihun/gitops-app
-  newTag: sha-478e3f5
+  newTag: sha-3f04f7e
 
 replicas:
 - count: 1
