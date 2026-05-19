@@ -9,7 +9,7 @@ namespace: ops-app1-dev
 images:
 - name: ops-app1
   newName: junjihun/ops-app1
-  newTag: sha-97d3580
+  newTag: sha-dbc9a58
 
 patches:
 - patch: |-
